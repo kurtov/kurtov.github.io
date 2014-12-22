@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://kurtov.github.io/atom.xml" rel="self"/>
   <link href="http://kurtov.github.io/"/>
-  <updated>2014-12-22T19:14:06+04:00</updated>
+  <updated>2014-12-22T19:47:00+04:00</updated>
   <id>http://kurtov.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Простые вероятности]]></title>
+    <link href="http://kurtov.github.io/blog/2014/12/22/simple-probability/"/>
+    <updated>2014-12-22T19:31:20+04:00</updated>
+    <id>http://kurtov.github.io/blog/2014/12/22/simple-probability</id>
+    <content type="html"><![CDATA[<p>Дано n игральных костей. Найдем вероятность выпадения ровно m костей с конкретный номиналом.</p>
+]]></content>
+  </entry>
   
 </feed>
