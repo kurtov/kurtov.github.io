@@ -1,0 +1,45 @@
+{% assign data = include.data %}
+<div style="overflow:auto">
+	<table>
+		<thead>
+			<tr>
+				<td></td>
+				<td></td>
+				<td colspan={{data.size + 1}}>
+					{{include.htitle}}
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				{% for head_i in (0..data.size) %}
+					<td>
+			  			{{head_i}}
+					</td>
+				{% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in data.prob %}
+				<tr>
+					{% if forloop.index == 1 %}
+						<td rowspan={{data.size}} style="-webkit-transform:rotate(270deg); white-space: nowrap; writing-mode:tb-rl; width:20px;"> {{include.vtitle}} </td>
+					{% endif %}
+					
+					<td>{{forloop.index}}</td>
+					
+					{% for item in row %}
+						<td style="white-space: nowrap; overflow: hidden; border: 1px solid black;{%if item.select == 1%} color:green;{% endif %}">
+							{{ item.data|powerable }}
+						</td> 
+					{% endfor %}
+
+					{% capture dummy_rest_td %}{{data.size | minus: forloop.index}}{% endcapture %}
+					{% for dummy_td in (1..dummy_rest_td) %}
+					 	<td></td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
